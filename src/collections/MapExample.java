@@ -2,6 +2,7 @@ package collections;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.TreeMap;
 
 
@@ -28,9 +29,19 @@ public class MapExample {
 		System.out.println(map1);
 		System.out.println(map1.get(3));
 		
+		for(Map.Entry<Integer, String> entry1: map1.entrySet()){
+			System.out.println(entry1.getKey());
+			System.out.println(entry1.getValue());
+		}
 		
+		for(Integer val: map1.keySet()) {
+			System.out.println("key is" + val);
+			
+		}
 		
-		
+		for(String val: map1.values()) {
+			System.out.println("Value is" +val);
+		}
 		LinkedHashMap<Integer,String> map2 = new LinkedHashMap<Integer,String>();
 		
 		map2.put(1,"Suraj");
